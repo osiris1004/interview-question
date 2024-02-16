@@ -3,7 +3,6 @@ package abstract_and_interface;
 public abstract class AnimalAbstract {
     int age;
     String name;
-
     public abstract void makeNoise();
 }
 
