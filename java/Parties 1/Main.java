@@ -12,4 +12,5 @@ class Main {
     printMessage("Hello!"); // Calls the first method
     printMessage(42); // Calls the second method
   }
+  
 }

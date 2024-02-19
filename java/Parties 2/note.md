@@ -28,8 +28,8 @@ Person person2 = new Person("Bob"); // Uses the second constructor
 
 
 ```
-
-## 3: How to define the copy constructor in Java? //
+## 3:
+## 4: How to define the copy constructor in Java? //
 Copy constructor in Java is when the the constructor has an parameter an object and the use the property of the object in the class
 ```
 class Point {
@@ -62,11 +62,39 @@ class Main2 {
 
   }
 }
-```
-## 4: 
-## 5: 
-## 6: 
+``` 
+## 5: What is the difference between method overloading and method overriding?
+**Method Overloading:**<br>
+It is when Multiple methods within the same class have the same name but different argument lists (number and types of arguments).
+``` 
+class Calculator {
+  int add(int a, int b) { return a + b; }
+  double add(double a, double b) { return a + b; }
+}
+``` 
+**Method Overriding(redéfinition des méthodes):**<br>
+It is when A method in a subclass has the same name and argument list as a method in its superclass. the purpose of overriding is to allow a subclasse provide its own implementation of the inherited method, customizing its behavior based on the subclass's needs.
+
+``` 
+class Animal {
+  public void makeSound() { System.out.println("Generic animal sound"); }
+}
+
+class Dog extends Animal {
+  @Override
+  public void makeSound() { System.out.println("Woof!"); }
+}
+``` 
+
+## 6: What is the purpose of ClassLoader in Java?
+
+The ClassLoader's task is to load the required classes and interfaces into the JVM when needed.
+Example: To read keyboard inputs, we need the Scanner class. The Scanner class is loaded by the ClassLoader.
 ## 7: 
-## 8: 
+
+## 8: What do you mean by object cloning, and how is it achieved in Java?
+This is the process of creating an exact copy of an object. To achieve this, a Java class must implement the Cloneable interface from the java.lang package and override the clone() method provided by the Object class, whose syntax is as follows:
+```
+```
 ## 9: 
 ## 10: 
