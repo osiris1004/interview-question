@@ -10,7 +10,7 @@ public abstract class AnimalAbstract {
 !! an abstract class enforce and organize exactly every subclass has to have
 
 
-!!  Can have constructors hence can not be initialize.
+!!  Can't have constructors hence can not be initialize.
 
 !! Can have instance variables, constants, and static variables.
 

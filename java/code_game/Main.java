@@ -20,7 +20,8 @@ class Main2 {
         // ! Compare the first argument to the second argument boolean compareResult =
         //! (XXX); if (compareResult) { System.out.println("The Strings are the same.");
         //! } else { System.out.println("The Strings are not the same."); }
-        if (compareResult) {
+        int init = 1;
+        if (init > 1) {
             System.out.println("The Strings are the same.");
         } else {
             System.out.println("The Strings are not the same.");

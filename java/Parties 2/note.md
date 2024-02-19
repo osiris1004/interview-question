@@ -1,100 +1,81 @@
-## 1: 
+## 1: What are the default values assigned to variables and instances in Java?
+* Numbers (int, float, etc.): 0
+* Boolean: false
+* Text (char): Blank character
+* Object references: null (not pointing to anything)
 
-## 2: Briefly explain the concept of constructor overloading?.
+
+## 2: What types of memory areas are allocated by the JVM?
+Data encapsulation means bundling data (group) and the methods that operate on that data into a single unit (class). It involves hiding the internal details of an object, controlling access to data through methods, and promoting a modular and maintainable code structure.
+
+## 3: 
 
 
-Constructor overloading allows a class to have multiple constructors with different argument lists, but the same name (the class name). This means you can create objects of the same class in different ways, providing different information during object creation.
+## 4: 
+
+
+## 5: Explain the use of the "final" keyword in a variable, a method, and a class.
+
+**Final Variable:**<br>
+Finale variable cannot be changed once it has been assigned.
+
+**Final Method:**<br>
+Finale method cannot be overridden by subclasses.
+
+**Final Class:**<br>
+ this final class can extend other classes for its use.
+
+
+
+## 6: Can static methods be overloaded?
+Yes! There can be two or more static methods in a class with the same name but different input parameters.
 ```
-class Person {
-  String name;
-  int age;
+public class MyClass {
 
-  // Constructor with name and age arguments
-  Person(String name, int age) {
-    this.name = name;
-    this.age = age;
+  public static void printMessage(String message) {
+    System.out.println(message);
   }
 
-  // Constructor with just name argument
-  Person(String name) {
-    this(name, 0); // Calls the first constructor internally
+  public static void printMessage(int value) {
+    System.out.println("The value is: " + value);
   }
-}
-
-// Usage:
-Person person1 = new Person("Alice", 30);
-Person person2 = new Person("Bob"); // Uses the second constructor
-
-
-
-```
-## 3:
-## 4: How to define the copy constructor in Java? //
-Copy constructor in Java is when the the constructor has an parameter an object and the use the property of the object in the class
-```
-class Point {
-  int x, y;
-
-  public Point(Point p) {
-    this.x = p.x;
-    this.y = p.y;
-  }
-
-  public Point(int x, int y) {
-    this.x = x;
-    this.y = y;
-  }
-
-  public int sum() {
-    return x + y;
-  }
-}
-
-class Main2 {
 
   public static void main(String[] args) {
-
-    Point point = new Point(1, 1);
-    System.out.println(point.sum());
-
-    Point point2 = new Point(point);
-    System.out.println(point2.sum());
-
+    printMessage("Hello!"); // Calls the first method
+    printMessage(42); // Calls the second method
   }
 }
-``` 
-## 5: What is the difference between method overloading and method overriding?
-**Method Overloading:**<br>
-It is when Multiple methods within the same class have the same name but different argument lists (number and types of arguments).
-``` 
-class Calculator {
-  int add(int a, int b) { return a + b; }
-  double add(double a, double b) { return a + b; }
-}
-``` 
-**Method Overriding(redéfinition des méthodes):**<br>
-It is when A method in a subclass has the same name and argument list as a method in its superclass. the purpose of overriding is to allow a subclasse provide its own implementation of the inherited method, customizing its behavior based on the subclass's needs.
-
-``` 
-class Animal {
-  public void makeSound() { System.out.println("Generic animal sound"); }
-}
-
-class Dog extends Animal {
-  @Override
-  public void makeSound() { System.out.println("Woof!"); }
-}
-``` 
-
-## 6: What is the purpose of ClassLoader in Java?
-
-The ClassLoader's task is to load the required classes and interfaces into the JVM when needed.
-Example: To read keyboard inputs, we need the Scanner class. The Scanner class is loaded by the ClassLoader.
-## 7: 
-
-## 8: What do you mean by object cloning, and how is it achieved in Java?
-This is the process of creating an exact copy of an object. To achieve this, a Java class must implement the Cloneable interface from the java.lang package and override the clone() method provided by the Object class, whose syntax is as follows:
 ```
-```
-## 9: 
+
+
+## 7: Why is the main method static in Java?
+The main() method is always static because static methods belong to the class, not a specific object. If the main() method were not static, it would be available for each object, which is not acceptable for the JVM. The JVM calls the main() method based on the class name itself, not by creating an object.
+
+
+## 8: 
+
+
+
+
+## 9: Difference between static methods, static variables, and static classes in Java?
+
+
+Static Methods:
+
+* A static method belongs to the class rather than an instance of the class.
+* It can be called using the class name, and it does not require an instance of the class to be created.
+* Static methods are often used for utility functions that do not depend on the state of an object.
+
+Static Variables:
+* A static variable is a class-level variable shared among all instances of the class.
+* It is declared with the static keyword and exists independently of any particular instance.
+* Changes to a static variable are reflected across all instances of the class.
+
+Static Classes:
+* In Java, classes themselves cannot be declared as static. All classes are loaded dynamically by the Java Virtual Machine (JVM) when needed.
+* However, inner classes can be declared as static. A static inner class is associated with its outer class but does not have an implicit reference to an instance of the outer class.
+* Static inner classes are often used for grouping related functionality within a class without an instance-level connection.
+
 ## 10: 
+
+

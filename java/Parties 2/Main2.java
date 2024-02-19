@@ -1,30 +1,16 @@
-class Point {
-  int x, y;
-
-  public Point(Point p) {
-    this.x = p.x;
-    this.y = p.y;
-  }
-
-  public Point(int x, int y) {
-    this.x = x;
-    this.y = y;
-  }
-
-  public int sum() {
-    return x + y;
-  }
-}
-
 class Main2 {
 
-  public static void main(String[] args) {
-
-    Point point = new Point(1, 1);
-    System.out.println(point.sum());
-
-    Point point2 = new Point(point);
-    System.out.println(point2.sum());
-
+  public static void printMessage(String message) {
+    System.out.println(message);
   }
+
+  public static void printMessage(int value) {
+    System.out.println("The value is: " + value);
+  }
+
+  public static void main(String[] args) {
+    printMessage("Hello!"); // Calls the first method
+    printMessage(42); // Calls the second method
+  }
+  
 }
