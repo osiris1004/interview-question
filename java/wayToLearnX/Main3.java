@@ -1,3 +1,4 @@
+package wayToLearnX;
 class Point {
   int x, y;
 
