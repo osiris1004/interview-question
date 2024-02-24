@@ -165,6 +165,7 @@ The scope of a bean defines the lifecycle and visibility of that bean. Here are 
 - **Mapping:** Provides automated object-relational mapping, allowing developers to work with Java objects directly without writing SQL queries.
 - **Complexity:** Generally simplifies database interactions, reducing boilerplate code and making it easier to work with databases.
 ## 16:Hibernate language is know as: HQL and the hHibernate specification is know as GPA
+it is independent from the data base, it uses cash for performace ans have already predefine method to do perform queries
 ## 17:If you change the database system the request will remain correct
 
 ## 18:Dialect
