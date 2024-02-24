@@ -1,3 +1,4 @@
+package wayToLearnX;
 class Main2 {
 
   public static void printMessage(String message) {

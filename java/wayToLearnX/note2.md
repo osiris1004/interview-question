@@ -6,9 +6,10 @@
 
 
 ## 2: What types of memory areas are allocated by the JVM?
-Data encapsulation means bundling data (group) and the methods that operate on that data into a single unit (class). It involves hiding the internal details of an object, controlling access to data through methods, and promoting a modular and maintainable code structure.
 
-## 3: 
+
+## 3: Encapsulation:
+Data encapsulation means bundling data (group) and the methods that operate on that data into a single unit (class). It involves hiding the internal details of an object, controlling access to data through methods, and promoting a modular and maintainable code structure.
 
 
 ## 4: 
