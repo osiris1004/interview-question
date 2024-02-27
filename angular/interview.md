@@ -54,23 +54,54 @@ they are class that add additional behavior to an element
 ## What is the difference between Component, Attribute and Structural Directives?
 # -- Section 5 
 ## What is Decorator?
-it is metadata about a class, method or property
+it is metadata about a class, method or property. or it is a  design pattern or functions that define how Angular features work.
 ## What are the types of Decorator?
 
 ## What are Pipes? What are the types of Pipes & Parameterized Pipes?
  
 ## What is Chaining Pipes?
+pipe are function that accept an input and return a transformed value
+### parameterize pipe
+    {{123.56 | currency }} 
+    {{123.56 | currency : 'INR' }}  where 'INR' is a parameterize constructor
+### Chain pipe
+    {{"07/23/1984" | date | uppercase }} 
 # -- Section 6
 ## Explain Services with Example?
+a service is a a typescript class and a resuable code which acn be used in multiple component. and services con be implement with the help of **dependency injection**
 ## How to create Servicein Angular?
 ## How to use Dependency Injector with Services in Angular?
 ## What is Hierarchical Dependency Injection?
+
 ## What is Provider in  Angular?
+It make a service available for injecting inside a component
 ## What is the role of @Injectable Decorator in a Service?
+With @Injectable Decorator one service can be used by another service. hence mean if i am in **service A** and i what to inject **service B**  which is done via the constructor, this @Injectable Decorator all the injection
 # -- Section 7 
 ## What are Parent-Child Components?
 ## What are Lifecycle Hooks in Angular?
+this are stages through which a component goes from creation to destruction
+- **Constructor** is the default method of a class that is executed when a class is instantiated ans it always run before any other hook and is not part of the life cycle hook
+- **ngOnChanges** it is call when input properties changes
+    ```
+    export class ExampleComponent implements OnChanges {
+  @Input() inputData: string;
+
+  ngOnChanges(changes: SimpleChanges): void {
+    // This method will be called when the value of @Input() properties changes.
+    // You can perform actions based on the changes here.
+    if (changes.inputData) {
+      console.log('Input Data changed:', changes.inputData.currentValue);
+    }
+  }
+}
+```
+- **ngInInit** is is called when the component is created
+- **ngDoCheck, ngAfterContentInit,ngAfterContentChecked,  ngAfterViewInit, ngAfterView Checked** <br>
+This hook that are called in child component
+- ngDoCheck
 ## What is a Constructor in Angular?
+
 ## What is ngOnInit life cycle hook in Angular?
 ## What is the difference between constructor and ngOnInit?
 # -- Section 8 
