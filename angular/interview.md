@@ -81,9 +81,10 @@ With @Injectable Decorator one service can be used by another service. hence mea
 ## What are Parent-Child Components?
 ## What are Lifecycle Hooks in Angular?
 this are stages through which a component goes from creation to destruction
-- **Constructor** is the default method of a class that is executed when a class is instantiated ans it always run before any other hook and is not part of the life cycle hook
-- **ngOnChanges** it is call when input properties changes
-    ```
+- **Constructor** is the default method of a class that is executed when a class is instantiated and it always run before any other hook and is not part of the life cycle hook.<br>
+constructor is use to inject dependency, initialize module
+- **ngOnChanges** it is call when input properties changes and can be call many time
+```
     export class ExampleComponent implements OnChanges {
   @Input() inputData: string;
 
@@ -96,20 +97,73 @@ this are stages through which a component goes from creation to destruction
   }
 }
 ```
-- **ngInInit** is is called when the component is created
-- **ngDoCheck, ngAfterContentInit,ngAfterContentChecked,  ngAfterViewInit, ngAfterView Checked** <br>
+- **ngInInit** is is called when the component is created or it signal the creation of the component and it is call once
+- **ngDoCheck** :is a method in Angular that gets executed during every change detection cycle. It enables the implementation of custom change detection logic. For example, you can use it to perform specific actions when changes occur in the component.
+
+- **ngAfterContentInit, ngAfterContentChecked,  ngAfterViewInit, ngAfterViewChecked** <br>
 This hook that are called in child component
-- ngDoCheck
+    - **ngAfterViewInit**: This hook is called after the component's view has been fully initialized.
+- **ngOnDestroy** : it is a hook call when the component is destroyed.
+It's a good place to clean up resources, unsubscribe from observables, etc. 
 ## What is a Constructor in Angular?
 
 ## What is ngOnInit life cycle hook in Angular?
+is is called when the component is created or it signal the creation of the component and it is call once
 ## What is the difference between constructor and ngOnInit?
+constructor                 | ngOnInit
+-------------               | -------------
+call before any life-cycle  | called after the ngOnChange
+hooks                       | life-cycle hook
+it is a type script method  | it is a an angular method
+use for dependency injection| use to perform component business logic
+
 # -- Section 8 
 ## What are Asynchronous operations?
+Asynchronous is the parallel execution of task while synchronies is one after the other or sequence execution 
 ## What is the difference between Promise and Observable?
+Promise                         | Observable
+-------------                   | -------------
+promise wait that all the data  | observable does not wait. as soon
+-------------                   | -------------
+is fetch before display         | there is data it show immediately  (streaming data)   |
+-------------                   | -------------
+they are not lazy, that is  execute immediately when all data is fetch     | they are lazy, that is they are not executed 
+until they a subscribe
+-------------                   | -------------
+they ar not cancelable          | They have subscription that are cancelable
+
 ## What is RxJS?
+It is library for asynchronous and event base programming by using observable
 ## What is Observable? How to implement Observable
+### create an Observable
+```
+myObservable = new Observable (observer=>{
+    observer.next("a") // .next is use to emit data or relies the data
+    observer.next("a")
+    observer.next("a")
+})
+```
+### consume the Observable
+```
+ngOnInt();void{
+    this.myObservable.subscribe((val=>{
+        console.log(val)
+    }))
+}
+```
+### promise d'ont need to be consume
+```
+const isPromise = new Promise <string> ((resolve, reject)=>{
+    const x = 0;
+    if(x === 0){
+        setTimeout(() => resolve("200"), 300);
+    }else{
+        setTimeout(() => resolve("Error"), 300);
+    }
+}).then(data=>console.log(data))
+```
 ## What is the role of HttpClient in Angular?
+it is a build in service class available in angular which perform http request
 # -- Section 9 
 ## What is Typescript? Or What is the difference between Typescript and Javascript?
 ## What is the difference between let and var keyword?## What is Type annotation?
