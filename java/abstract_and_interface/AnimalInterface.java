@@ -9,7 +9,7 @@ public interface AnimalInterface {
 
  !! Cannot have constructors. Interfaces cannot be instantiated.
 
-!! Can only have constants (public static final variables).
+!! Can only have constants ( static final variables).
 
 !! Can only have abstract methods and default/static methods.
 

@@ -1,7 +1,7 @@
 ## 1:  why is java independend from the plate fome in simple terme
 Java is platform-independent because the Code is compiled into this universal format(bytecode), and any device with a Java Virtual Machine (JVM) can run it. The JVM interprets the bytecode, making Java apps work on different platforms without changes.
 
-NB JRE is the amsbling of classe and library use to execute java code
+NB JRE is the tool that hole all classes and library use to execute java code
 
 NB JDK contain JRE and JVM
 
@@ -56,7 +56,7 @@ class ImmutablePerson {
 }
 ```
 
-## 7:The difference between wet and list
+## 7:The difference between set and list
 ### List:
 - **Ordered Collection:** Lists maintain the order of elements based on their index. The order in which elements are added is preserved.
 - **Duplicates:** Lists allow duplicate elements. You can have the same value present multiple times in a list.
@@ -81,20 +81,31 @@ mySet.add("Apple"); // Duplicate not allowed
 
 ## 9:
 ### Core Spring Framework Annotations
-1. @Required
-2. @Autowired
-3. @Configuration
-4. @ComponentScans
-5. @Bean
-6. @Qualifier
-7. @Lazy
-8. @Value
+1. @Required<br>
+tells a property monst not be null. hence most have a value
+2. @Autowired :<br> 
+inject dependency
+@Bean<br>
+When you mark a method with **@Bean** in a class annotated with **@Configuration**, Spring understands that calling this method will give it an instance of a specific object. This object, known as a bean, is then managed by the Spring container and can be used in other parts of your application.
+3. @Configuration<br>
+It helps set up and arrange special objects called beans in our Spring app.
+4. @ComponentScans<br>
+used to specify or locate the base packages to scan for Spring-managed components.
+6. @Qualifier<br>
+7. @Lazy<br>
+It delays the creation of a bean until it is actually needed.
+8. @Value: <br>
+Access application.properties variable @Value("${app.name}")
 
 ### Spring Framework StereoType Annotations
 9. @Component
+It indicates that a class is a Spring component and is eligible for auto-detection and auto-configuration. That is When Spring's component scanning is enabled, it will discover the class decorated with @Component and create an instance of it in the Spring container. This allows you to use the Instance component throughout your application, and you can inject it into other Spring-managed components, such as controllers or services.
 10. @Controller
+It is use to define controller classes responsible for handling HTTP requests.
 11. @Service
+Service classes typically contain business logic and are often used to encapsulate and manage business operations (such as operation on getting and adding user in the system).
 12. @Repository
+It is used to define classes that interact with a database, 
 
 ### Spring Boot Annotations
 13. @EnableAutoConfiguration
@@ -117,6 +128,7 @@ mySet.add("Apple"); // Duplicate not allowed
 28. @RequestAttribute
 29. @CookieValue
 30. @CrossOrigin
+By using this annotation, you explicitly specify which origins are permitted to access your API, thereby allowing cross-origin requests from those specified domains.
 
 ## 10: @SpringBootApplication is made up of the following application;
 @EnableAutoConfiguration
