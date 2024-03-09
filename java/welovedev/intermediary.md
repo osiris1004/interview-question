@@ -134,7 +134,8 @@ public class DownloadManager {
 }
 
 ```
-## 10:
+## 10:Un objet référencé est
+Un objet qui peut être atteint par un thread “vivant”
 ## 12:
 ## 13:
 ## 14:

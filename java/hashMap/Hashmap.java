@@ -9,6 +9,14 @@ public class Hashmap {//! a map is a collection of ket value pair
         HashMap<String, Integer> empIds = new HashMap<>();
         empIds.put("john", 1);
         empIds.put("mary", 2);
+
+        empIds.get("john"); //* return 1
+        empIds.containsKey("test"); //* return false */
+        empIds.containsValue("2"); //* return true */
+
+        empIds.put("john", 10); //* update value 1 to 10 if the key exit else add*/
+        empIds.remove("john"); //* remove the element with key john */
+        empIds.clear(); //* empty the the map */
     }
     
 }
