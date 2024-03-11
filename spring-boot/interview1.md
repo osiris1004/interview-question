@@ -90,9 +90,46 @@ public class AppConfig{
 
 ## 13:what is decency injection  
 decency injection is a design pattern use to apply loose coupling between the classes, buy removing the direct dependency between them
+```
+@Service
+public class orderService{
+    @Autowired
+    private OrderRepository orderRepository;
+}
+```
 
 ## 14:Hom many ways we can perform dependency injection in spring or spring boot 
-## 15:
+- 1 field level dependency injection
+```
+@Service
+public class orderService{
+    @Autowired
+    private OrderRepository orderRepository;
+}
+```
+- 2 setter dependency injection
+```
+@Service
+public class orderService{
+    @Autowired
+    public void setOrderRepository (OrderRepository orderRepository){
+        this.orderRepository = orderRepository
+    }
+}
+```
+- 3  constructor dependency injection
+```
+@Service
+public class orderService{
+    @Autowired
+    public orderService (OrderRepository orderRepository){
+        this.orderRepository = orderRepository
+    }
+}
+```
+
+## 15:when should you use setter injection over constructor injection ans vice versa
+
 ## 16:
 ## 17:
 ## 18:
