@@ -2,11 +2,11 @@
 ## 2:The difference between locale variable and instance variable     
 ### Local Variable:
 
-- Scope: Limited to the block or method where it is declared.
-- Declaration: Inside a method, constructor, or any block of code.
-- Initialization: Must be explicitly initialized before use.
-- Lifetime: Exists only as long as the block or method is executing.
-- Usage: Not accessible outside the block or method in which it is declared.   
+- **Scope**: Limited to the block or method where it is declared.
+- **Declaration**: Inside a method, constructor, or any block of code.
+- **Initialization**: Must be explicitly initialized before use.
+- **Lifetime**: Exists only as long as the block or method is executing.
+- **Usage**: Not accessible outside the block or method in which it is declared.   
 ```
 public void exampleMethod() {
     int localVar = 10; // Local variable
@@ -15,11 +15,11 @@ public void exampleMethod() {
 
 ```
 ### Instance Variable (or Member Variable):
-- Scope: Belongs to an instance of a class, so it is accessible throughout the entire class.
-- Declaration: Outside methods, usually at the class level.
-- Initialization: Automatically initialized with default values if not explicitly set.
- Lifetime: Exists as long as the object (instance of the class) exists.
-- Usage: Accessible throughout the class, and each instance of the class has its own copy.
+- **Scope**: Belongs to an instance of a class, so it is accessible throughout the entire class.
+- **Declaration**: Outside methods, usually at the class level.
+- **Initialization**: Automatically initialized with default values if not explicitly set.
+- **Lifetime**: Exists as long as the object (instance of the class) exists.
+- **Usage**: Accessible throughout the class, and each instance of the class has its own copy.
 ```
 public class MyClass {
     int instanceVar; // Instance variable
@@ -31,9 +31,9 @@ public class MyClass {
 
 ```
 ## 3:the order for the execution in java is
-1- static block, 
-2- initialization block,  
-3- constructor block
+1- Static block.
+2- Initialization block. 
+3- Constructor block.
 
 ## 4:Difference between a List and a Map
 ### List:

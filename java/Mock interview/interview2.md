@@ -11,7 +11,7 @@ Objects are instances of classes that encapsulate data (attributes) and the func
 Classes are templates for creating objects. They define the properties (attributes) and behaviors (methods) that objects will have.t involves restricting access to the internal state of an object and only allowing interactions through well-defined methods.
 
 ### Encapsulation:
-Encapsulation is the bundling of data and the methods that operate in to a single unit known as class .
+Encapsulation is the bundling of data and the methods that operate in to a single unit known as class .By encapsulating a class's variables, other classes cannot access them, and only the methods of the class can access them.
 ```
 public class BankAccount {
     private double balance; // private variable
@@ -154,7 +154,7 @@ DOM, or Document Object Model,  refers to the hierarchical representation of an 
 - **===** checks values are equal, considering both value and type, without type conversion. 
 
 
-## 8:
+## 8:The difference between spring and spring boot
 - **Spring:** Requires manual configuration, writing XML files, and setting up various components.
 - **Spring Boot:** Offers auto-configuration, eliminating most manual setup and boilerplate code.
 - **Spring:** Has a steeper learning curve due to manual configuration.
