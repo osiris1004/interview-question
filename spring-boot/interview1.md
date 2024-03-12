@@ -127,17 +127,100 @@ public class orderService{
     }
 }
 ```
-
+### NB
+A circular dependency occurs when two or more classes depend on each other, either directly or indirectly, creating a loop. In other words, Class A depends on Class B, and Class B depends on Class A, forming a circular reference.
 ## 15:when should you use setter injection over constructor injection ans vice versa
+- Setter injection
+    -  Use Setter injection when you have many dependencies. 
+    -  Setter injection in optional that is if you don't inject the dependency (bean) there is no problems
+    -  can result to circular dependency with the use of **@Lazy**
+- Constructor Injection
+    -  Use Constructor Injection when an object must be created with all of its dependencies.
+    -  Constructor Injection  is mandatory that is, if you don't inject the dependency (bean) the programme will crash because it must be inject at run time
+    -  can result to circular dependency
 
-## 16:
-## 17:
-## 18:
-## 19:
 
-## 20:
-## 21:
-## 22:
+## 16:can you provide an example of real world use case where @PostConstruct is useful
+@PostConstruct is use to execute the preprocessing logic (NB using the CommandLineRunner you can perform preprocessing logic)
+```
+@PostConstruct
+public void initLogic(){
+    System.out.printLn("xxxx test)
+}
+```
+one use came is pu implementing the connection pool logic
+
+## 17:hom can we dynamically load values in spring boot application
+- make use of  the @value annotation : 
+```
+@Value("${discount.offer}")
+private String envArgs
+
+```
+- make use of Environment from org.springframework.core.env as show below 
+```
+Autowired
+private Environment
+```
+ 
+## 18:can you explain the key differnec between TML and properties files, and in what scenarios you might prefer one format over the other
+- Syntax and Structure
+    - ```
+        discount.offer.price = 25
+      ```
+      vs  
+    - ```
+        discount:
+                offer:
+                    price : 25 
+      ```
+- Hierarchy
+    - ```
+         spring.datasource.driver-class = com.mysql.cj.jdbc.Driver
+         spring.datasource.driver-class.username : jdbc:mysql://localhost:3306/javatechie
+         spring.datasource.driver-class.user: root
+         spring.datasource.driver-class.password : password
+     ```
+    vs
+   - ```
+        spring:
+                datasource:
+                        driver-class: com.mysql.cj.jdbc.Driver
+                        username : jdbc:mysql://localhost:3306/javatechie
+                        user: root
+                        password : password
+    ```
+- Lists and Arrays
+   - ```
+        mylist=apple,banana,orange
+     ```
+    vs
+   - ```
+        mylist :
+            - apple
+            - banana
+            - orange
+     ```
+
+
+- Complex Data types
+    - properties files only understand string and integer data type
+    - yml fils understand complex data type 
+
+- Readability
+
+## 19:What is the diffrence beyween yml and YAML
+
+
+## 20:if i configure same values in bothe properties then which value will load in spring boot first between properties and yml file ?
+
+## 21:How to load External properties in spring Boot
+
+- spring.config.import = file/location.properties
+    - this tell spring load instead the properties file that is locate at file/location.properties
+
+## 22:How to map or bind config properties to java object
+
 ## 23:
 ## 24:
 ## 25:
