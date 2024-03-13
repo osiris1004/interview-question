@@ -220,12 +220,65 @@ private Environment
     - this tell spring load instead the properties file that is locate at file/location.properties
 
 ## 22:How to map or bind config properties to java object
+# ---------------------------------------------------------PART-2-----------------------------------------------------------------------------------------
+## 23:how will you resolve bean decency ambiguity
+if you have an interface and is  implemented by 2 difference class and you want to inject it the inter face in a class, an error will occure by sing a single bean is required but 2 was found. to solve the problem make use of **@Qualifier** annotation
+```
+@Service
+public void TrailerService(){
 
-## 23:
-## 24:
-## 25:
-## 26:
-## 27:
+    Autowired
+    @Qualifier("rderRepositoryIml2")
+    private OrderRepository orderRepository
+}
+```
+ @Qualifier("orderRepositoryIml2") // i want to inject the the implementation2.Class of this particular interface (private OrderRepository orderRepository)
+## 24:can we avoid this dependency ambiguity without using @Qualifier
+yes which is:
+- @Resource(name= "orderRepositoryIml2")
+
+## 25:what is bean scope and can you explain the difference type of bean
+beans scope is the life cycle and visibility of a spring bean
+ 
+ Singleton:
+- An object instantiated once, and the same instance is shared across the entire application.
+Example: Creating a database connection manager that's reused by all parts of the application.
+
+Prototype:
+- A new instance of the object is created every time it is requested.
+Example: Creating a new user object for each user logging into a system.
+
+Request:
+- A new instance is created for each HTTP request.
+Example: Creating a user authentication object for each user request to a web server.
+
+Session:
+- A new instance is created for each user session in a web application.
+Example: Storing user-specific data in an object that lasts throughout a user's visit to a website.
+
+Application:
+- A single instance is created for the entire web application.
+Example: Storing global settings or data that should be shared among all users in a web application.
+
+WebSocket:
+- Represents a continuous communication channel between the server and a client, allowing bidirectional communication.
+Example: Establishing a WebSocket connection to enable real-time, interactive communication between a web server and a web browser.
+
+## 26:how to define custom bean scope ?
+
+## 27:can you provide few real-time use cases for when to choose singleton scope and prototype scope.
+
+- singleton scope
+    - data configuration
+    - service layout
+        - Think of a logging service like a shared diary for your application. Using Singleton ensures that all parts of your program write in the same diary, making it easy to find and understand what's happening across the entire application. 
+    - application configuration
+- prototype scope
+    - user session
+    - thread safety
+    - heavy initialization
+
+
 ## 28:
 ## 29:
 
