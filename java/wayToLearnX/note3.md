@@ -30,7 +30,7 @@ Person person2 = new Person("Bob"); // Uses the second constructor
 ```
 ## 3:
 ## 4: How to define the copy constructor in Java? //
-Copy constructor in Java is when the the constructor has an parameter an object and the use the property of the object in the class
+Copy constructor in Java is when the constructor of class is passed an object and make copy of the object properties that are assign to another object properties
 ```
 class Point {
   int x, y;
@@ -155,7 +155,7 @@ try {
 
 ```
 ### finalize:
-Deprecated method called by the Garbage Collector just before an object is reclaimed from memory.<br>
+Deprecated method:  this method was called by the Garbage Collector  before an object is remove from memory.<br>
 **NB**We Discouraged the use of finilize because it's unpredictable and not guaranteed to be called before reclamation. Should not be used for critical resource cleanup.
 
 ```

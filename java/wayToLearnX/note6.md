@@ -3,7 +3,7 @@
 ## 3: 
 ## 4: The lifecycle of a Java thread involves several states which are:
 * **New:** The thread is in this state before the start() method is called. It's created, but not yet started. <br>
-* **Runnable:** After calling **start()**, the thread enters the runnable state. It's ready to run, but the scheduler has not selected it to be the running thread.<br>
+* **Runnable:** After calling **start()**, the thread enters the runnable state. It's ready to run, but wait that the scheduler select it before running thread.<br>
 * **Blocked:** A thread moves to the blocked state when it wants to access an object that another thread has locked. It will remain in this state until the requested resource is available.<br>
 * **Waiting:** A thread moves to the waiting state while it waits for another thread to perform a particular action. It will stay in this state until it receives a notification or an interrupt.<br>
 * **Timed Waiting:** Similar to waiting, but for a specified interval of time. The thread will move to the runnable state after the specified time elapses.<br>

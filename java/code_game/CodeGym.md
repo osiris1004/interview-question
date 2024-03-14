@@ -34,13 +34,13 @@ Java avoids multiple inheritance due to:
  Ambiguity arises when inheriting from multiple classes with the same method name. Leads to confusion about which method to call.
 
 2 -Complexity: <br>
-Managing multiple inheritance rules and resolving conflicts adds unnecessary complexity for developers.
+you should not that unnecessary complexity arises when manage multiple inheritance rules and resolve conflicts..
 
 **Alternatives**:
 
 * **Interfaces**: Implement multiple interfaces for desired functionality, avoiding inheritance conflicts.
 
-* **Composition**: Create objects of other classes within your class instead of inheriting, achieving similar benefits.
+* **Composition**: Composition: Instead of inheriting, create objects of other classes within your own class to achieve similar benefits.
 
 
 
