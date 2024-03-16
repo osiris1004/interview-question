@@ -73,7 +73,7 @@ stereotype annotations are  labels you put on your classes to tell Spring what r
 - @Controller:
     - Indicates that the class is a controller component, responsible for  handling HTTP requests response.
 - @RestController:
-## 12:How cna you define bean in spring framework
+## 12:How can you define bean in spring framework
 There are 2 way 
 - 1 :
 ```
@@ -148,7 +148,7 @@ public void initLogic(){
     System.out.printLn("xxxx test)
 }
 ```
-one use came is pu implementing the connection pool logic
+one use came is  implementing the connection pool logic
 
 ## 17:hom can we dynamically load values in spring boot application
 - make use of  the @value annotation : 
@@ -163,7 +163,7 @@ Autowired
 private Environment
 ```
  
-## 18:can you explain the key differnec between TML and properties files, and in what scenarios you might prefer one format over the other
+## 18:can you explain the key different between YML and properties files, and in what scenarios you might prefer one format over the other
 - Syntax and Structure
     - ```
         discount.offer.price = 25
@@ -221,8 +221,8 @@ private Environment
 
 ## 22:How to map or bind config properties to java object
 # ---------------------------------------------------------PART-2-----------------------------------------------------------------------------------------
-## 23:how will you resolve bean decency ambiguity
-if you have an interface and is  implemented by 2 difference class and you want to inject it the inter face in a class, an error will occure by sing a single bean is required but 2 was found. to solve the problem make use of **@Qualifier** annotation
+## 23:how will you resolve bean dependency ambiguity
+if you have an interface and is  implemented by 2 difference class and you want to inject it the interface in a class, an error will occur by sing a single bean is required but 2 was found. to solve the problem make use of **@Qualifier** annotation
 ```
 @Service
 public void TrailerService(){
@@ -276,24 +276,26 @@ Example: Establishing a WebSocket connection to enable real-time, interactive co
 - prototype scope
     - user session
     - thread safety
+        - thread is a unit of execution
+        - thread safety is the execution of multiple thread simultaneously with corruption issues
     - heavy initialization
 
 
 ---------------------------------------------------------PART-4-----------------------------------------------------------------------------------------
-## 28:how you worked on restful web services ?  if yes what all http method have you use in your project
-Post create a resource
-put update
-get  fetch 
-patch update partially
-delete remove a resource
+## 28:have you worked on restful web services ?  if yes what all http method have you use in your project
+- **Post :** create a resource
+- **put :** update
+- **get :**  fetch 
+- **patch :** update partially
+- **delete :** remove a resource
 
 ## 29:how can you specify the http method type for your Rest endpoint
-@GetMapping(value ="/message", product = MediaType.Text_Plain_Value)
+- **@GetMapping(value ="/message", product = MediaType.Text_Plain_Value)**
 - NB you set @Controller make use of @RespondBody
-@PostMapping()
-@PutMapping()
-@PatchMapping()
-@DeleteMapping()
+- **@PostMapping()**
+- **@PutMapping()**
+- **@PatchMapping()**
+- **@DeleteMapping()**
 
 ## 30:can you design a rest endpoint, assume that you have a product database, and your task is to create an API to filter a list of products by productType
 ```
@@ -397,32 +399,3 @@ using swagger
 ## 40:
 
 ## the most important design pattern in java 
-### Singleton Pattern:
-Ensures that a class has only one instance and provides a global point of access to it.
-
-### Factory Pattern:
-Defines an interface for creating objects but lets subclasses decide which class to instantiate.
-
-### Builder Pattern:
-Allows the construction of complex objects step by step, separating the construction process from the representation.
-
-### Observer Pattern:
-Defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.
-
-### Adapter Pattern:
-Allows us to work with incompatible interfaces  by providing a bridge between them.
-
-### Decorator Pattern:
-Adds new functionality to an object dynamically without altering its structure.
-
-### Strategy Pattern:
-Defines a family of algorithms, encapsulates each one, and makes them interchangeable. It allows the algorithm to vary independently from clients that use it.
-
-### Facade Pattern:
-Provides a unified interface to a set of interfaces in a subsystem, making the subsystem easier to use.
-
-### Composite Pattern:
-Allows clients to treat individual objects and compositions of objects uniformly.
-
-### Template Method Pattern:
-Defines the skeleton of an algorithm in the superclass but lets subclasses override specific steps of the algorithm without changing its structure.
