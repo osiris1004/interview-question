@@ -12,7 +12,7 @@
 ## 6: 
 ## 7: 
 ## 8:  System.out.println('H' + 'e' + 'l' + 'l' + 'o'); = 500
-due to the fact that we are using  '' at the pace of "", hence it will understand which charters as ASCII value
+Due to the fact that we are using  **' '** instead of  **" "** , java understand that the charters as ASCII value
 ```
 class Main4 {
         public static void main(String[] args)

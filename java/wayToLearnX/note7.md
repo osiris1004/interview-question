@@ -73,6 +73,7 @@ class Main4 {
 Java design patterns are classified into the following types:
 
 #### Structural Patterns:
+They focus on how classes and objects can be composed to form larger structures.
 - Decorator
 - Proxy
 - Composite
@@ -83,6 +84,7 @@ Java design patterns are classified into the following types:
 - Filter
 
 #### Behavioral Patterns:
+Behavioral patterns focus on communication between objects
 - Visitor
 - Strategy
 - Iterator
@@ -97,15 +99,44 @@ Java design patterns are classified into the following types:
 - Front controller
 - Data Access Object
 
-### Creational Patterns:
-
+#### Creational Patterns:
+Creation Patterns deals with the manner of creating objects in a suitable to the situation.
 - Builder
 - Prototype
 - Singleton
 - Factory
 - Abstract Factory
 
-## 3: 
+## 3: the most important design pattern
+### Singleton Pattern:
+Ensures that a class has only one instance and provides a global point of access to it.
+
+### Factory Pattern:
+Defines an interface for creating objects but lets subclasses decide which class to instantiate.
+
+### Builder Pattern:
+Allows the construction of complex objects step by step, separating the construction process from the representation.
+
+### Observer Pattern:
+Defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.
+
+### Adapter Pattern:
+Allows us to work with incompatible interfaces  by providing a bridge between them.
+
+### Decorator Pattern:
+Adds new functionality to an object dynamically without altering its structure.
+
+### Strategy Pattern:
+Defines a family of algorithms, encapsulates each one, and makes them interchangeable. It allows the algorithm to vary independently from clients that use it.
+
+### Facade Pattern:
+Provides a unified interface to a set of interfaces in a subsystem, making the subsystem easier to use.
+
+### Composite Pattern:
+Allows clients to treat individual objects and compositions (object made of object) of objects individually.
+
+### Template Method Pattern:
+Defines the skeleton of an algorithm in the superclass but lets subclasses override specific steps of the algorithm without changing its structure.
 ## 4: 
 ## 5: 
 ## 6: 
