@@ -133,7 +133,7 @@ By using this annotation, you explicitly specify which origins are permitted to 
 ## 10: @SpringBootApplication is made up of the following application;
 @EnableAutoConfiguration
 @ComponentScan. use to scan packages and create bean
-@Configuration. use ro mark a class as a configuration class
+@Configuration. use to mark a class as a configuration class
 
 ## 11:The difference between stateless and stateful authentication in Spring
 
@@ -176,7 +176,7 @@ The scope of a bean defines the lifecycle and visibility of that bean. Here are 
 - **Control:** Offers a higher level of abstraction, reducing the need for manual handling of database connections and SQL queries.
 - **Mapping:** Provides automated object-relational mapping, allowing developers to work with Java objects directly without writing SQL queries.
 - **Complexity:** Generally simplifies database interactions, reducing boilerplate code and making it easier to work with databases.
-## 16:Hibernate language is know as: HQL and the hHibernate specification is know as GPA
+## 16:Hibernate language is know as: HQL and the hHibernate specification is know as JPA
 it is independent from the data base, it uses cash for performace ans have already predefine method to do perform queries
 ## 17:If you change the database system the request will remain correct
 
