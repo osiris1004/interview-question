@@ -3,7 +3,7 @@
     - spring-core, spring-context, spring-tx, spring-orm, spring-web, spring-webmvc, hibernate-core, hibernate-validator, jackson-core, servlet-api,
     - you will have version conflict due to the manual configuration, if there is a downgrade our an upgrade of the dependency version  
 - when using spring boot, you avoid any additional configuration when doing a task compare to spring
-- spring have an embed tomcat for deploying you jar or war file for testing you app, where in spring je need to build it manually then host it in your tomcat server 
+- spring boot have an embed tomcat for deploying you jar or war file for testing you app, where as in spring you need to build it manually then host it in your tomcat server 
 - spring has a separated starter call actuator  which can easily monitor your application ( metrics, health checks)
 
 ## 2: Give me some spring boot starter or module
@@ -28,10 +28,11 @@ mvn spring-boot:run
 
 ## 4:what is the use of @SpringBootApplication
 this is the combination of 3 annotation which are :
-- @EnableAutoConfiguration
-    - This annotation tells Spring Boot to automatically configure your application based on the dependencies you've added and the beans you've defined.
+
 - @ComponentScan
-    - This annotation instructs Spring to scan and locate components, such as beans and controllers, in specified packages. Spring needs to know where to find your classes annotated with @Component, @Service, @Repository, etc. @ComponentScan helps by telling Spring which packages to scan for these components. It ensures that Spring is aware of all the relevant classes in your 
+    - This annotation instructs Spring to scan and locate components, such as beans and controllers, in specified packages. Spring needs to know where to find your classes annotated with @Component, @Service, @Repository, etc. @ComponentScan helps by telling Spring which packages to scan for these components. It ensures that Spring is aware of all the relevant classes in your
+- @EnableAutoConfiguration
+    - This annotation tells Spring Boot to automatically configure your application based on the dependencies you've added and the beans you've defined. 
 - @Configuration
     - In a configuration class, you define beans using methods annotated with @Bean. These beans are then managed by the Spring container. @Configuration is used to indicate that the class contains configuration information for the application.
 
@@ -65,7 +66,19 @@ CommandLineRunner is an interface that allow you to run a piece of code when you
 ## 10:Can you explain the purpose of stereotype annotations in spring framework ?
 stereotype annotations are  labels you put on your classes to tell Spring what role or purpose they play in your application. Here are a few common stereotype annotations in Spring:
 - @Component:
-    - Used to indicate that a class is a Spring component and should be automatically detected and configured by Spring.
+    - Used to indicate that  class  should be automatically detected and configured by Spring.
+    - Here's what the @Component annotation does:
+
+        - **Bean Registration:** Spring registers the annotated class as a bean in its application context.
+
+        - **Bean Instantiation:** Spring creates an instance of the annotated class and manages its lifecycle, including instantiation, dependency injection, and destruction.
+
+        - **Auto-Detection:** Spring automatically detects and registers classes annotated with @Component during the component scanning process.
+
+        - **Dependency Injection:** Beans annotated with @Component can be injected into other Spring beans using dependency injection mechanisms like @Autowired.
+
+        - Overall, the @Component annotation simplifies the configuration of Spring applications by allowing you to declare beans with minimal configuration, relying on convention over configuration.
+
 - @Service:
     - Indicates that the class is a service component, typically used for business logic.
 - @Repository:
@@ -73,6 +86,10 @@ stereotype annotations are  labels you put on your classes to tell Spring what r
 - @Controller:
     - Indicates that the class is a controller component, responsible for  handling HTTP requests response.
 - @RestController:
+
+- @Configuration: 
+    - It is use create beans based on specific conditions.
+
 ## 12:How can you define bean in spring framework
 There are 2 way 
 - 1 :
@@ -222,7 +239,7 @@ private Environment
 ## 22:How to map or bind config properties to java object
 # ---------------------------------------------------------PART-2-----------------------------------------------------------------------------------------
 ## 23:how will you resolve bean dependency ambiguity
-if you have an interface and is  implemented by 2 difference class and you want to inject it the interface in a class, an error will occur by sing a single bean is required but 2 was found. to solve the problem make use of **@Qualifier** annotation
+if you have an interface and is  implemented by 2 difference class and you want to inject it the interface in a class, an error will occur by saying a single bean is required but 2 was found. to solve the problem make use of **@Qualifier** annotation
 ```
 @Service
 public void TrailerService(){

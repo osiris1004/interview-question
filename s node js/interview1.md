@@ -106,8 +106,20 @@ http
 ## 22:function  and event ?
 - function is a reusable piece of code to perform a task
 - event is an action that can be observe and responded to
-## 23:
-## 24:
+
+## 23:http module
+it create an http server that listen to a port to perform http request and response  
+
+## 24: Use of createServer()
+it is use to create an http server 
+```
+const http = request("http")
+const server = http.createServer((req,res)=>{
+    res.end("hello")
+})
+const port = 3000;
+server.listen(port,()=> console.log(`server is listening on port ${port}`))
+```
 ## 25:
 ## 26:
 ## 27:

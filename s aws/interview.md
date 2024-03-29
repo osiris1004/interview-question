@@ -178,26 +178,36 @@ in the rout table you need to edit by putting 0.0.0.0/0 in the destination filed
 
 ## database deployment
 
-## create an instance of EC2
+## create an instance of EC2 for App
 - give the instance name
 - select the image
 - in vpc network
     - select your vpc
     - select the subnet where the instance we reside (if you select private AZ1 then your security group must match)
     - select the security group that marches (that is private security group)
+- connect to the instance and  ping (address can accept a request)
+- in the instance install mysql
+- configure your data base
+- test the data base
+- install all necessary tools to run my node manager running all over time 
+
+- THIS is done after S3 bucket
+    - import your server app 
+    - run your app 
 
 
-# ----------------------------------TUTORIAL aws freecodecamp---------------------------------------
-## VPC
-It's a virtual network that you create and control, similar to having your own private space on the internet. With a VPC, you can launch and run your AWS resources, such as servers and databases, in a secure and isolated environment.<br>
-thing you will learn are:
-- how to defined you  own IP address ranges for a VPC
-- how to create create a  vpc
-- how to lunch resources int to  VPc
-- how to perform routing and vpc security groups
-- handle network access control lists
-- vpN connections, direct connection and more
+## S3 bucket
+- use to upload you source code
+- in your source code you have DBConfig.ts and the same config that is found in your mysql aws to this config file
 
-# What is an ip address
-this a address computer uses to communicate between each other
+- upload the apptier folder
 
+
+# create a machine image from ## create an instance of EC2
+- to setup load balancer
+- auto scaling group
+    - this have 2 server running and this will be register as by the load balancer
+
+
+## create an instance of EC2 for Web (nginx)
+- in my nginx config i should replace the internal proxi wil the ip for the load balancer 

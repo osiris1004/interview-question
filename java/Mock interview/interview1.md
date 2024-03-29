@@ -1,9 +1,8 @@
-## 1:  why is java independend from the plate fome in simple terme
+## 1:  why is java independent from the plate forme in simple term
 Java is platform-independent because the Code is compiled into this universal format(bytecode), and any device with a Java Virtual Machine (JVM) can run it. The JVM interprets the bytecode, making Java apps work on different platforms without changes.
 
-NB JRE is the tool that hole all classes and library use to execute java code
-
-NB JDK contain JRE and JVM
+NB *JRE* is the tool that hole all classes and library use to execute java code <br>
+NB *JDK* contain JRE and JVM
 
 ## 2:
 
@@ -133,7 +132,7 @@ By using this annotation, you explicitly specify which origins are permitted to 
 ## 10: @SpringBootApplication is made up of the following application;
 @EnableAutoConfiguration
 @ComponentScan. use to scan packages and create bean
-@Configuration. use ro mark a class as a configuration class
+@Configuration. use to mark a class as a configuration class
 
 ## 11:The difference between stateless and stateful authentication in Spring
 
@@ -176,7 +175,7 @@ The scope of a bean defines the lifecycle and visibility of that bean. Here are 
 - **Control:** Offers a higher level of abstraction, reducing the need for manual handling of database connections and SQL queries.
 - **Mapping:** Provides automated object-relational mapping, allowing developers to work with Java objects directly without writing SQL queries.
 - **Complexity:** Generally simplifies database interactions, reducing boilerplate code and making it easier to work with databases.
-## 16:Hibernate language is know as: HQL and the hHibernate specification is know as GPA
+## 16:Hibernate language is know as: HQL and the hHibernate specification is know as JPA
 it is independent from the data base, it uses cash for performace ans have already predefine method to do perform queries
 ## 17:If you change the database system the request will remain correct
 
