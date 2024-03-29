@@ -1,9 +1,8 @@
-## 1:  why is java independend from the plate fome in simple terme
+## 1:  why is java independent from the plate forme in simple term
 Java is platform-independent because the Code is compiled into this universal format(bytecode), and any device with a Java Virtual Machine (JVM) can run it. The JVM interprets the bytecode, making Java apps work on different platforms without changes.
 
-NB JRE is the tool that hole all classes and library use to execute java code
-
-NB JDK contain JRE and JVM
+NB *JRE* is the tool that hole all classes and library use to execute java code <br>
+NB *JDK* contain JRE and JVM
 
 ## 2:
 
