@@ -81,7 +81,7 @@ mySet.add("Apple"); // Duplicate not allowed
 ## 9:
 ### Core Spring Framework Annotations
 1. @Required<br>
-tells a property monst not be null. hence most have a value
+tells a property most not be null. hence most have a value
 2. @Autowired :<br> 
 inject dependency
 @Bean<br>
@@ -98,7 +98,7 @@ Access application.properties variable @Value("${app.name}")
 
 ### Spring Framework StereoType Annotations
 9. @Component
-It indicates that a class is a Spring component and is eligible for auto-detection and auto-configuration. That is When Spring's component scanning is enabled, it will discover the class decorated with @Component and create an instance of it in the Spring container. This allows you to use the Instance component throughout your application, and you can inject it into other Spring-managed components, such as controllers or services.
+it tell spring creates instances of these classes denoted with @Component, which can then be injected and used throughout the application
 10. @Controller
 It is use to define controller classes responsible for handling HTTP requests.
 11. @Service

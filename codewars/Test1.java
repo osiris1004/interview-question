@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-class Test {
+class Test1 {
 
     static String toCamelCase(String s){
         String[] strSplit = s.split(""); 
