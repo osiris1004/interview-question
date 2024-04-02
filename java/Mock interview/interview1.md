@@ -109,6 +109,7 @@ It is used to define classes that interact with a database,
 ### Spring Boot Annotations
 13. @EnableAutoConfiguration
 14. @SpringBootApplication
+This annotation mark on the main class as the entry point and encapsulate auto-configuration and component scanning.
 
 ### Spring MVC and Rest Annotations
 15. @Controller
@@ -147,12 +148,12 @@ Idea: In stateful authentication, the server keeps track of the client's authent
 How it Works: After a successful login, the server creates a session and associates it with the client. Subsequent requests include a session identifier to link them to the authenticated session.
 
 ## 12:IoC (Inversion of control)
-Ioc mean that instead of the programmer deciding the flow of the application, that what object and etc etc, this is all handle to the spring framework (spring container)<br>
+Ioc mean that instead of the programmer deciding the flow of the application, that is what object and etc etc, this is all handle to the spring framework (spring container)<br>
 One of the things that IoC require is dependency injection.<br>
 what happen in our code is that instead of instancing some new object, spring is actually doing it for us
 
 ## 13:Beans
-A Bean is an instance of a class that is manage bu the spring container<br>
+A Bean is an instance of a class or method that is manage buy the spring container<br>
 Spring container is responsible of managing all the beans
 
 ## 14: what are the difference scope of bean in spring  
