@@ -171,6 +171,7 @@ The scope of a bean defines the lifecycle and visibility of that bean. Here are 
 - **Control:** Developers have more control over SQL queries and database interactions.
 - **Mapping:** Object-relational mapping (ORM) is not automated; developers need to write SQL queries and map results to Java objects manually.
 - **Complexity:** Generally involves more boilerplate code and is considered more complex for certain tasks.
+
 ### Hibernate:
 - **Approach:** Hibernate is a high-level ORM framework that automates many database operations, making it more developer-friendly.
 - **Control:** Offers a higher level of abstraction, reducing the need for manual handling of database connections and SQL queries.

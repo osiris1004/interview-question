@@ -14,6 +14,9 @@ public class Exemple
 ## 3: What happens if the "static" keyword is not included in the signature of the main() method in Java?
 There would be no compilation error. However, when the program is executed, since the JVM cannot match the signature of the main method, the code generates a "NoSuchMethodError" at runtime.
 
+## what is synchronization in java
+It ensures that only one thread can access shared resources and ensuring thread safety.
+
 
 
 
