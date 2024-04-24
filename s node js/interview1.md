@@ -7,6 +7,9 @@ library and framework <br>
 - A library is like a collection of pre-written code that you can use in your program.
 - A framework is like a structure that dictates how your program should be designed and is follow the RAd by offering tools, library.
 
+## ECMAScript (ES) 
+it is js stander specification that govern how js most behave. It defines the syntax, semantics, and rules that JavaScript engines must follow to interpret and execute code
+
 ## 2:how node is a server side runtime environment 
 browser execute javascript on the client side and similar to node js execute javascript on the server side
 ## 3:what is v8
@@ -26,6 +29,15 @@ V8 is a JavaScript engine that interprets and executes JavaScript code.
 
 ## 4:express and nest js
 help to ease the building of web app and api by providing tools like routing middleware etc
+
+## modules
+it is an encapsulated and reusable code that has it own context. 3 type of module are identify
+- locale module
+    - modules that we create in our application
+- built in module
+    - modules that nodejs ships with out of the book
+- third party modules
+    - modules written by other developers that can use it in their app
 
 ## 5:client side and server-side
 - client side : 

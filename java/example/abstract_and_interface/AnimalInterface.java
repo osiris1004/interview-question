@@ -2,21 +2,27 @@ package abstract_and_interface;
 
 public interface AnimalInterface {
     public void pop();
+    
    
 }
 
 /*
- !! every method  are abstract, you dont need to add the hey word abstract and can oly be abstract
+ !! 1  every method  are abstract, you dont need to add the hey word abstract.
 
- !! Cannot have constructors. Interfaces cannot be instantiated.
+ !! 2 Can only have constants variable ( static final variables).
 
-!! Can only have constants ( static final variables).
+ !! 3 !! All methods are implicitly public ( Can only have default/static methods.).
 
-!! Can only have abstract methods and default/static methods.
+ !! 4 Supports multiple inheritance; a class can implement multiple interfaces. 
 
-!! All methods in an interface are implicitly public and abstract (except static and default methods).
+ !!  Can't have constructors hence can not be initialize.
 
-!! All methods are implicitly public.
 
-!! Supports multiple inheritance; a class can implement multiple interfaces.
+
+
+
+
+
+
+
  */

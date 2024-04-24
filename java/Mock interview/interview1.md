@@ -81,7 +81,7 @@ mySet.add("Apple"); // Duplicate not allowed
 ## 9:
 ### Core Spring Framework Annotations
 1. @Required<br>
-tells a property monst not be null. hence most have a value
+tells a property most not be null. hence most have a value
 2. @Autowired :<br> 
 inject dependency
 @Bean<br>
@@ -98,7 +98,7 @@ Access application.properties variable @Value("${app.name}")
 
 ### Spring Framework StereoType Annotations
 9. @Component
-It indicates that a class is a Spring component and is eligible for auto-detection and auto-configuration. That is When Spring's component scanning is enabled, it will discover the class decorated with @Component and create an instance of it in the Spring container. This allows you to use the Instance component throughout your application, and you can inject it into other Spring-managed components, such as controllers or services.
+it tell spring creates instances of these classes denoted with @Component, which can then be injected and used throughout the application
 10. @Controller
 It is use to define controller classes responsible for handling HTTP requests.
 11. @Service
@@ -109,6 +109,7 @@ It is used to define classes that interact with a database,
 ### Spring Boot Annotations
 13. @EnableAutoConfiguration
 14. @SpringBootApplication
+This annotation mark on the main class as the entry point and encapsulate auto-configuration and component scanning.
 
 ### Spring MVC and Rest Annotations
 15. @Controller
@@ -147,12 +148,12 @@ Idea: In stateful authentication, the server keeps track of the client's authent
 How it Works: After a successful login, the server creates a session and associates it with the client. Subsequent requests include a session identifier to link them to the authenticated session.
 
 ## 12:IoC (Inversion of control)
-Ioc mean that instead of the programmer deciding the flow of the application, that what object and etc etc, this is all handle to the spring framework (spring container)<br>
+Ioc mean that instead of the programmer deciding the flow of the application, that is what object and etc etc, this is all handle to the spring framework (spring container)<br>
 One of the things that IoC require is dependency injection.<br>
 what happen in our code is that instead of instancing some new object, spring is actually doing it for us
 
 ## 13:Beans
-A Bean is an instance of a class that is manage bu the spring container<br>
+A Bean is an instance of a class or method that is manage buy the spring container<br>
 Spring container is responsible of managing all the beans
 
 ## 14: what are the difference scope of bean in spring  
@@ -170,6 +171,7 @@ The scope of a bean defines the lifecycle and visibility of that bean. Here are 
 - **Control:** Developers have more control over SQL queries and database interactions.
 - **Mapping:** Object-relational mapping (ORM) is not automated; developers need to write SQL queries and map results to Java objects manually.
 - **Complexity:** Generally involves more boilerplate code and is considered more complex for certain tasks.
+
 ### Hibernate:
 - **Approach:** Hibernate is a high-level ORM framework that automates many database operations, making it more developer-friendly.
 - **Control:** Offers a higher level of abstraction, reducing the need for manual handling of database connections and SQL queries.

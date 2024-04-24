@@ -120,20 +120,21 @@ Allows the construction of complex objects step by step, separating the construc
 ### Observer Pattern:
 Defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.
 
-### Adapter Pattern:
-Allows us to work with incompatible interfaces  by providing a bridge between them.
 
 ### Decorator Pattern:
 Adds new functionality to an object dynamically without altering its structure.
 
 ### Strategy Pattern:
-Defines a family of algorithms, encapsulates each one, and makes them interchangeable. It allows the algorithm to vary independently from clients that use it.
+it allow us to define a family of algorithms, put each of them into a separate class, and make their objects interchangeable.
+
+### Adapter Pattern:
+Allows us to work with incompatible interfaces  by providing a bridge between them.
 
 ### Facade Pattern:
-Provides a unified interface to a set of interfaces in a subsystem, making the subsystem easier to use.
+it enable us to provide a simple interface to control a complex system
 
 ### Composite Pattern:
-Allows clients to treat individual objects and compositions (object made of object) of objects individually.
+Allows use to compose objects into tree structures and then work with these structures as if they were individual objects.
 
 ### Template Method Pattern:
 Defines the skeleton of an algorithm in the superclass but lets subclasses override specific steps of the algorithm without changing its structure.

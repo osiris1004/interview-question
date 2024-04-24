@@ -11,5 +11,9 @@ public class Cat extends AnimalAbstract implements AnimalInterface{
     public void pop() {
         System.out.println("poop");
     }
+    @Override
+    private void mm() {
+        System.out.println("poop");
+    }
 
 }
