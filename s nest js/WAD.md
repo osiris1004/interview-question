@@ -11,7 +11,7 @@
 
 ## How do you declare a value type provider in Nest.js?
 - Using the decorator *@Provider()*
-- By declaring it in the table *providers* of a module with a specific syntax.
+- * By declaring it in the table *providers* of a module with a specific syntax.
 - By exporting a constant from a module.
 - By defining a route with a particular prefix.
 
@@ -19,7 +19,7 @@
 ## How to manage resource sharing (CORS) with NestJS?
 - app.enableCors();
 - app.cors();
-- const app = await NestFactory.create(AppModule, { cors: true });
+- * const app = await NestFactory.create(AppModule, { cors: true });
 - const app = await NestFactory.create(AppModule, { cors: { origin: 'url_d_origine' } });
 
 
@@ -30,22 +30,22 @@
 - LoggingInterceptor
 
 
-## How can you associate one ExceptionFilterwith a specific controller or route?
+## How can you associate one ExceptionFilter with a specific controller or route?
 - By adding it to the *apply()* class method MiddlewareConsumer.
 - By declaring it in the *main.ts* .
-- Using the decorator *@UseFilters()*.
+- * Using the decorator *@UseFilters()*.
 - Using the decorator *@UseMiddleware()*.
 
 
 ## In the context of the declaration of providers, what is the specific role of useFactory?
 - Determine the life cycle of the provider.
 - Assign roles or permissions to users.
-- Instantiate a provider based on dynamic logic or configurations
+- * Instantiate a provider based on dynamic logic or configurations
 - Integrate external dependencies into the module
 
 
 ## Which of these objects is injected into the constructor of a custom Guard to get details about the current request?
-- ExecutionContext
+- * ExecutionContext
 - RouterContext
 - GuardContext
 - NestExecutionContext
@@ -54,7 +54,7 @@
 ## Which method *ConfigModule* would allow you to load an asynchronous configuration?
 - asynchrone()
 - loadAsync()
-- forRootAsync()
+- * forRootAsync()
 - asyncConfig()
 
 
